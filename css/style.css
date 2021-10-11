@@ -6,16 +6,38 @@ body {
 nav.main-navbar {
 	display:  flex;
 	padding: 2rem;
+	width: 100%;
+}
+
+nav.main-navbar .brand {
+	padding: 2rem;
 }
 
 nav.main-navbar ul.nav {
 	display:  flex;
 	list-style: none;
-	padding: 0;}
+	padding: 2rem;
 }
 
-nav.main-navbar ul.nav li a {
+@media screen and (min-width: 480px) {
+	nav.main-navbar ul.nav {
+		display:  flex;
+		margin-left: auto;
+		list-style: none;
+		padding: 2rem;
+	}
+}	
+
+nav.main-navbar ul.nav li a:hover,
+nav.main-navbar ul.nav li a:focus {
 	padding: 0.5rem 1rem;
+	color: lightskyblue;
+}
+
+nav.main-navbar-home {
+	position: relative;
+	z-index: 10;
+	margin-bottom: -121px;
 }
 
 section.main {
@@ -30,7 +52,15 @@ section.main {
 section.main h1{
 	font-size: 4rem;
 	font-weight: 500;
+	margin: 0;
+	margin-bottom: -2rem;
+	z-index: 1;
+}
 
+@media screen and (min-width: 480px) {
+	section.hero h1 {
+		font-size: 9rem;
+	}
 }
 
 section.main h2{
